@@ -1,0 +1,46 @@
+{
+  "name": "js-dsal",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms for javascript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahzaib-sheikh/js-dsal.git"
+  },
+  "keywords": [
+    "Data",
+    "Structures",
+    "Algorithms",
+    "Javascript"
+  ],
+  "author": "Shahzaib Sheikh <shahzaib4213@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahzaib-sheikh/js-dsal/issues"
+  },
+  "homepage": "https://github.com/shahzaib-sheikh/js-dsal#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.5"
+  }
+}
