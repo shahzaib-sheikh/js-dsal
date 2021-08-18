@@ -1,5 +1,5 @@
 {
-  "name": "js-dsal",
+  "name": "dsal",
   "version": "1.0.0",
   "description": "Data Structures and Algorithms for javascript",
   "main": "lib/index.js",
